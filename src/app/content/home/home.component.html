@@ -1,0 +1,62 @@
+<div>
+<ul class="tree vertical">
+		<li>
+			<div>root</div>
+			<ul>
+
+				<li>
+					<div>node</div>
+					<ul>
+						<li>
+							<div>node</div>
+						</li>
+						<li>
+							<div>node</div>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<div>node</div>
+					<ul>
+						<li>
+							<div>node</div>
+							<ul>
+								<li>
+									<div>node</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<div>node</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>code</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container *ngFor="let user of users">
+
+
+      <tr>
+        <td scope="row">{{user.name}}</td>
+        <td scope="row">{{user.code}}</td>
+        <td scope="row">{{user.imagePath}}</td>
+      </tr>
+    </ng-container>
+    <tr>
+      <td scope="row"></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
