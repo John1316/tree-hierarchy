@@ -6,18 +6,23 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './content/home/home.component';
-import {NgwWowModule} from 'ngx-wow';
+import { NgwWowModule } from 'ngx-wow';
+import {  TreeGridModule } from "@syncfusion/ej2-angular-treegrid";
+import { SortPipe } from './pipes/sort.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    SortPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgwWowModule
+    NgwWowModule,
+    TreeGridModule
   ],
   providers: [],
   bootstrap: [AppComponent]

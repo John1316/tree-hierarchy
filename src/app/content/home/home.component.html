@@ -89,14 +89,24 @@
             </tr>
           </thead>
           <tbody>
-            <ng-container *ngFor="let user of users; let i = index">
+            <ng-container *ngFor="let user of sortedUsers; let i = index">
 
 
-              <tr class="wow animated slideInRight" [ngStyle]="{'animation-delay': i+incrementSeconds}">
+              <tr class="wow animated slideInRight" [ngStyle]="{'animation-delay': '0.'+i+incrementSeconds}" *ngIf="user.code.length === 4">
                 <td scope="row" >{{user.name}}</td>
                 <td scope="row" >{{user.code}}</td>
                 <td scope="row" >{{user.imagePath}}</td>
               </tr>
+              <ng-container  *ngIf="user.code.length !== 4 && user.code.length > 4">
+
+                <tr class="wow animated slideInRight" [ngStyle]="{'animation-delay': '0.'+i+incrementSeconds}">
+
+                  <td scope="row" >{{user.name}}</td>
+                  <td scope="row" >{{user.code | slice:-4}}</td>
+                  <td scope="row" >{{user.imagePath}}</td>
+
+                </tr>
+              </ng-container>
             </ng-container>
 
           </tbody>
