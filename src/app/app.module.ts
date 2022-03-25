@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './content/home/home.component';
+import {NgwWowModule} from 'ngx-wow';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import { HomeComponent } from './content/home/home.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgwWowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

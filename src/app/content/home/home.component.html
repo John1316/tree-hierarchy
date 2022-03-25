@@ -1,6 +1,7 @@
-<div>
-<ul class="tree vertical">
-		<li>
+<!-- <div>
+  <ul class="tree vertical">
+
+  <li>
 			<div>root</div>
 			<ul>
 
@@ -34,29 +35,74 @@
 			</ul>
 		</li>
 	</ul>
-</div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>name</th>
-      <th>code</th>
-      <th>Image</th>
-    </tr>
-  </thead>
-  <tbody>
-    <ng-container *ngFor="let user of users">
+</div> -->
+<!-- <article>
+
+  <div class="container">
+
+    <div class="row justify-content-center mt-3">
+      <div class="col-12 text-center">
+        <h4>List of tree hirecachy</h4>
+      </div>
+      <div class="col-lg-8 ">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>name</th>
+              <th>code</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let user of users; let i = index">
 
 
-      <tr>
-        <td scope="row">{{user.name}}</td>
-        <td scope="row">{{user.code}}</td>
-        <td scope="row">{{user.imagePath}}</td>
-      </tr>
-    </ng-container>
-    <tr>
-      <td scope="row"></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+              <tr class="wow animated slideInRight" [ngStyle]="{'animation-delay': i+incrementSeconds}">
+                <td scope="row" >{{user.name}}</td>
+                <td scope="row" >{{user.code}}</td>
+                <td scope="row" >{{user.imagePath}}</td>
+              </tr>
+            </ng-container>
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</article> -->
+<article>
+
+  <div class="container">
+
+    <div class="row justify-content-center mt-3">
+      <div class="col-12 text-center">
+        <h4>List of tree hirecachy</h4>
+      </div>
+      <div class="col-lg-8 ">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>name</th>
+              <th>code</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ng-container *ngFor="let user of users; let i = index">
+
+
+              <tr class="wow animated slideInRight" [ngStyle]="{'animation-delay': i+incrementSeconds}">
+                <td scope="row" >{{user.name}}</td>
+                <td scope="row" >{{user.code}}</td>
+                <td scope="row" >{{user.imagePath}}</td>
+              </tr>
+            </ng-container>
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</article>

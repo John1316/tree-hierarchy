@@ -9,6 +9,6 @@ export class ApiService {
 
   constructor(private _HttpClient:HttpClient) { }
   getUsersData(): Observable<any>{
-    return this._HttpClient.get('assets/users.json');
+    return this._HttpClient.get('assets/users.json')
   }
 }

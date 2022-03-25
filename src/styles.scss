@@ -1,10 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-body {
-  display:flex;
-  flex-wrap:wrap;
-  font-family: Arial;
-  justify-content: center;
-}
+// body {
+//   display:flex;
+//   flex-wrap:wrap;
+//   font-family: Arial;
+//   justify-content: center;
+// }
 
 h3 {
   text-align:center;
@@ -302,3 +302,9 @@ h3 {
     }
   }
 }
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";

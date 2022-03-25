@@ -31,9 +31,13 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/wowjs/css/libs/animate.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/wowjs/dist/wow.min.js"
+            ]
           },
           "configurations": {
             "production": {
