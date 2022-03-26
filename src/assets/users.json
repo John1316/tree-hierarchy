@@ -2,42 +2,42 @@
 {
 "name": "ahmed",
 "code": "0001",
-"imagePath": "{replaceWithImagePath}"
+"imagePath": "avatar.jpg"
 },{
 "name": "mohamed",
 "code": "0001.0003.0004.0002",
-"imagePath": "{replaceWithImagePath}"
+"imagePath": "avatar.jpg"
 },{
 "name": "ali",
 "code": "0001.0003",
-"imagePath": "{replaceWithImagePath}"
+"imagePath": "avatar.jpg"
 },{
 "name": "ibrahim",
 "code": "0001.0003.0004",
-"imagePath": "{replaceWithImagePath}"
+"imagePath": "avatar.jpg"
 },{
 "name": "mahmoud",
 "code": "0001.0010.0005",
-"imagePath": "{replaceWithImagePath}"
+"imagePath": "avatar.jpg"
 },{
 "name": "samy",
 "code": "0001.0010.0006",
-"imagePath": "{replaceWithImagePath}"
+"imagePath": "avatar.jpg"
 },{
 "name": "hany",
 "code": "0001.0003.0004.0007",
-"imagePath": "{replaceWithImagePath}"
+"imagePath": "avatar.jpg"
 },{
 "name": "samir",
 "code": "0001.0010.0005.0008",
-"imagePath": "{replaceWithImagePath}"
+"imagePath": "avatar.jpg"
 },{
 "name": "khalid",
 "code": "0001.0010.0006.0009",
-"imagePath": "{replaceWithImagePath}"
+"imagePath": "avatar.jpg"
 },{
 "name": "abdullah",
 "code": "0001.0010",
-"imagePath": "{replaceWithImagePath}"
+"imagePath": "avatar.jpg"
 }
 ]
