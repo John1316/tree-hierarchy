@@ -31,7 +31,9 @@
               "src/assets"
             ],
             "styles": [
+
               "node_modules/wowjs/css/libs/animate.css",
+              
               "src/styles.scss"
             ],
             "scripts": [

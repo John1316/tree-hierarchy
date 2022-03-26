@@ -7,14 +7,12 @@ import { HttpClientModule } from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './content/home/home.component';
 import { NgwWowModule } from 'ngx-wow';
-import {  TreeGridModule } from "@syncfusion/ej2-angular-treegrid";
-import { SortPipe } from './pipes/sort.pipe';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SortPipe
   ],
   imports: [
     BrowserModule,
@@ -22,7 +20,6 @@ import { SortPipe } from './pipes/sort.pipe';
     HttpClientModule,
     BrowserAnimationsModule,
     NgwWowModule,
-    TreeGridModule
   ],
   providers: [],
   bootstrap: [AppComponent]

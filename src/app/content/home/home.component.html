@@ -2,127 +2,37 @@
   <ul class="tree vertical">
 
   <li>
-			<div>root</div>
-			<ul>
+    <ng-container *ngFor="let user of users">
 
-				<li>
-					<div>node</div>
-					<ul>
-						<li>
-							<div>node</div>
-						</li>
-						<li>
-							<div>node</div>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<div>node</div>
-					<ul>
-						<li>
-							<div>node</div>
-							<ul>
-								<li>
-									<div>node</div>
-								</li>
-							</ul>
-						</li>
-						<li>
-							<div>node</div>
-						</li>
-					</ul>
-				</li>
+
+      <div *ngIf="user.code.length === 4" class="card text-center border-0">
+        <img [src]="'assets/'+user.imagePath" height="100px" class="w-100 mb-0" alt="">
+        <div class="card-body m-0 py-2">
+          <h5 class="card-title">{{user.name}}</h5>
+          <p class="card-text">{{user.code}}</p>
+        </div>
+      </div>
+    </ng-container>
+			<ul>
+        <ng-container *ngFor="let user of userSorted; let i = index">
+
+          <li class="wow animated slideInRight" *ngIf="user.code.length > 4" [ngStyle]="{'animation-delay':'0.2'+i+incrementSeconds}">
+            <div   class="card text-center border-0">
+              <img [src]="'assets/'+user.imagePath" height="100px" class="w-100 mb-0" alt="">
+              <div class="card-body m-0 py-2">
+                <h5 class="card-title">{{user.name}}</h5>
+                <p class="card-text">{{user.code | slice:-4}}</p>
+              </div>
+            </div>
+
+
+            
+          </li>
+        </ng-container>
+
+
 			</ul>
 		</li>
 	</ul>
 </div>
-<!-- <article>
 
-  <div class="container">
-
-    <div class="row justify-content-center mt-3">
-      <div class="col-12 text-center">
-        <h4>List of tree hirecachy</h4>
-      </div>
-      <div class="col-lg-8 ">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>name</th>
-              <th>code</th>
-              <th>Image</th>
-            </tr>
-          </thead>
-          <tbody>
-            <ng-container *ngFor="let user of users; let i = index">
-
-
-              <tr class="wow animated slideInRight" [ngStyle]="{'animation-delay': i+incrementSeconds}">
-                <td scope="row" >{{user.name}}</td>
-                <td scope="row" >{{user.code}}</td>
-                <td scope="row" >{{user.imagePath}}</td>
-              </tr>
-            </ng-container>
-
-          </tbody>
-        </table>
-
-      </div>
-    </div>
-  </div>
-</article> -->
-<article>
-
-  <div class="container">
-
-    <div class="row justify-content-center mt-3">
-      <div class="col-12 text-center">
-        <h4>List of tree hirecachy</h4>
-      </div>
-      <div class="col-lg-8 ">
-        <table class="table table-striped">
-          <thead>
-            <tr>
-              <th>code</th>
-              <th>name</th>
-              <th>Image</th>
-            </tr>
-          </thead>
-          <tbody>
-            <ng-container *ngFor="let user of users; let i = index">
-
-
-              <tr class="wow animated slideInRight" [ngStyle]="{'animation-delay': '0.'+i+incrementSeconds}" *ngIf="user.code.length === 4">
-                <td  >{{user.code}}</td>
-                <td  >{{user.name}}</td>
-                <td  ><img [src]="'assets/'+user.imagePath" height="50px" alt=""></td>
-              </tr>
-            </ng-container>
-            <ng-container *ngFor="let user of userSorted; let i = index">
-              <ng-container *ngIf="user.code.length !== 4 && user.code.length > 4">
-
-
-                <tr class="wow animated slideInRight" [ngStyle]="{'animation-delay': '0.'+i+incrementSeconds}">
-
-                  <td>{{user.code | slice:-4}}</td>
-                  <td >{{user.name}}</td>
-                  <td ><img [src]="'assets/'+user.imagePath" height="50px" alt=""></td>
-                </tr>
-              </ng-container>
-            </ng-container>
-
-          </tbody>
-        </table>
-        <!-- <ejs-treegrid [dataSource]='userContainer' [treeColumnIndex]='1' childMapping='parent'>
-          <e-columns>
-              <e-column field='name' headerText='name' ></e-column>
-              <e-column field='code' headerText='code' ></e-column>
-              <e-column field='image' headerText='image'  ></e-column>
-              <e-column field='parent' headerText='parent'  ></e-column>
-          </e-columns>
-          </ejs-treegrid> -->
-
-      </div>
-    </div>
-  </div>
-</article>
